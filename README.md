@@ -1,4 +1,4 @@
-# Finální aplikace: 
+## Aplikace vystavená na internetu:
 https://react-my-weather-app.netlify.app/
 
 # Aplikace na zobrazení počasí 

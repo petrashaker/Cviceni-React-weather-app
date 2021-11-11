@@ -20,6 +20,7 @@ const App = () => {
   }
   useEffect(() => {
     fetchWeather();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [city])
 
   //stahuji předpověď počasí na 5 dní
@@ -32,6 +33,7 @@ const App = () => {
   }
   useEffect(() => {
     fetchFiveDaysWeather();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [weather])
 
   return (

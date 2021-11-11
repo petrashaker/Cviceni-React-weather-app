@@ -6,7 +6,7 @@ import {convertTimeStamp} from '../../utils/index.js';
 const Weather = ({weather}) => {
     return (
         <>
-        { weather === null || weather === undefined ? null : 
+        { weather &&
             <div className={weather.main.temp < 10 ? "weather__current weather__current--cold" : "weather__current"}>
               <h2 className="weather__city" id="mesto">
               {weather.name}, {weather.sys.country}
@@ -17,19 +17,18 @@ const Weather = ({weather}) => {
                     {Math.round(weather.main.temp)}
                   </span>
                   <span className="weather__temp-unit">°C</span>
-                  <div className="weather__description" id="popis">
-                  {weather.weather[0].description}
-                  </div>
                 </div>
                 <div
                   className="weather__section weather__section--icon"
                   id="ikona"
                 >
-                  
-                  <img  
+                  <img
                     src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                     alt="current weather icon"
-                  />
+                  />                  
+                  <div className="weather__description" id="popis">
+                  {weather.weather[0].description}
+                  </div>
                 </div>
               </div>
               <div className="weather__inner">

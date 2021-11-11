@@ -1,3 +1,6 @@
+# Finální aplikace: 
+https://react-my-weather-app.netlify.app/
+
 # Aplikace na zobrazení počasí 
 V tomto úkolu si vytvoříme aplikaci, která nám zobrazí aktuální počasí a předpověď na pět dní ve vybraném místě. Finální aplikace bude vypadat takto:  
      

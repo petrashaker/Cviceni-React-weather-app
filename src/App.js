@@ -9,7 +9,6 @@ import { cities } from "./utils/index.js";
 const App = () => {
   const appiKey = process.env.REACT_APP_MY_API_ID;
 
-  const [city, setCity] = useState('Abuja');
   const [weather, setWeather] = useState(null);
 
   //stahuji předpověď počasí na aktuální den
@@ -18,6 +17,7 @@ const App = () => {
     .then(response => response.json())
     .then(json => setWeather(json))
   }
+  const [city, setCity] = useState('Prague');
   useEffect(() => {
     fetchWeather();
     // eslint-disable-next-line react-hooks/exhaustive-deps

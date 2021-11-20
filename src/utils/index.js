@@ -4,10 +4,10 @@ export const oneForecastPerDay = (arr, nth) => arr.filter((e, i) => i % nth === 
 //funkce pro převod Unix Time Stamp pro čas východu a západu Slunce
 export const convertTimeStamp = (sunTime) => {
     const timeObject = new Date(sunTime * 1000);
-    const hours = timeObject.getUTCHours();
-    const minutes = timeObject.getUTCMinutes();
+    const hours = timeObject.getHours();
+    const minutes = timeObject.getMinutes();
     const formatedTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
-    return formatedTime;
+    return formatedTime
 }
 
 //funkce pro převod Unix Time Stamp pro datum a den

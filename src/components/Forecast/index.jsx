@@ -6,7 +6,7 @@ import {convertDateStamp} from '../../utils/index.js';
 const Forecast = ({forecast}) => {
     return (
         <>
-        {forecast && forecast.map (i => 
+        {forecast && forecast.map ((item, i) => 
                 <div className="forecast" key={i}>
                     <div className="forecast__day">{convertDateStamp(forecast[i].dt)}</div>
                     <div className="forecast__icon">

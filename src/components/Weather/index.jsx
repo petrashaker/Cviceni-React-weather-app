@@ -49,13 +49,13 @@ const Weather = ({weather}) => {
                 <div className="weather__section">
                   <h3 className="weather__title">Sunrise</h3>
                   <div className="weather__value">
-                    <span id="sunrise">{convertTimeStamp(String(weather.sys.sunrise))}</span>
+                    <span id="sunrise">{convertTimeStamp(weather.sys.sunrise, weather.timezone)}</span>
                   </div>
                 </div>
                 <div className="weather__section">
                   <h3 className="weather__title">Sunset</h3>
                   <div className="weather__value">
-                    <span id="sunset">{convertTimeStamp(String(weather.sys.sunset))}</span>
+                    <span id="sunset">{convertTimeStamp(weather.sys.sunset, weather.timezone)}</span>
                   </div>
                 </div>
               </div>
